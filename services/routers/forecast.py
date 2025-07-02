@@ -6,7 +6,7 @@ import json
 from datetime import datetime, timedelta
 from services.data_service import fetch_data, preprocess_data, create_features
 from services.model_factory import train_and_forecast
-from config import MODEL_DIR
+from utils.config import MODEL_DIR
 
 router = APIRouter(tags=["Stock Forecasting"])
 
