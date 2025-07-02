@@ -20,8 +20,15 @@ import numpy as np
 import httpx
 import random
 from textblob import TextBlob
-from .gemini_api import gemini_model, generate_financial_advice, analyze_articles, analyze_market_impact
-from scrapper.egypt_stock_news_scraper import scrape_egypt_stock_news
+from services.gemini_api import gemini_model, generate_financial_advice, analyze_articles, analyze_market_impact
+from scrapper.egypt_stock_news_scraper import (
+    scrape_yahoo_finance,
+    scrape_egx_press_releases,
+    scrape_mubasher_news,
+    scrape_almal_news,
+    scrape_google_news,
+    process_with_gemini
+)
 
 # Initialize router
 router = APIRouter(prefix="/chatbot", tags=["Chatbot"])
