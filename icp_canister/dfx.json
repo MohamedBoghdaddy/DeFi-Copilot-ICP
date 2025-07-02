@@ -1,7 +1,7 @@
 {
   "dfx": "0.27.0",
   "canisters": {
-    "profile_storage": {
+    "defi_copilot_backend": {
       "type": "motoko",
       "main": "src/defi_copilot_backend/main.mo"
     }
