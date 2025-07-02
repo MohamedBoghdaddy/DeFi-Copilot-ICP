@@ -1,0 +1,49 @@
+# === 🔧 Backend Frameworks ===
+fastapi
+uvicorn
+flask
+pydantic
+requests
+
+# === 🧠 Machine Learning & Forecasting ===
+numpy
+scipy
+pandas
+scikit-learn
+statsmodels
+xgboost
+prophet
+tensorflow
+keras
+torch
+torchvision
+torchaudio
+
+# === 📊 Visualization ===
+matplotlib
+seaborn
+
+# === 🤖 NLP & Transformers ===
+transformers
+sentence-transformers
+textblob
+accelerate
+bitsandbytes
+
+# === 🔄 Optimization Algorithms (PSO, ABC, etc.) ===
+deap  # evolutionary algorithms (GA, PSO)
+optuna  # hyperparameter tuning (optional)
+
+# === 🔐 Config & Env Handling ===
+python-dotenv
+
+# === 🗃️ MongoDB & Async DB ===
+pymongo
+motor
+
+# === 🧪 Testing & Utils ===
+httpx
+pytest
+
+# === 📈 Optional GPU Monitoring ===
+GPUtil
