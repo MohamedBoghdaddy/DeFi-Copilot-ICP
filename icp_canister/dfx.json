@@ -3,8 +3,7 @@
   "canisters": {
     "profile_storage": {
       "type": "motoko",
-      "main": "src/profile_storage/main.mo",
-      "candid": "src/profile_storage/profile_storage.did"
+      "main": "src/defi_copilot_backend/main.mo"
     }
   },
   "defaults": {
