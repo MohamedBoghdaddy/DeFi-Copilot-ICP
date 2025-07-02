@@ -1,91 +1,116 @@
-💸 DeFi Copilot – A Decentralized AI Financial Advisor on ICP
-DeFi Copilot is an AI-powered, Web3-based financial advisory dApp built on the Internet Computer Protocol (ICP). It combines React, FastAPI, and machine learning with on-chain identity and wallet-based login to deliver personalized investment insights, real-time forecasting, and portfolio simulation.
+# DeFi Copilot 🧠💼
 
-📍 Built for the WCHL 2025 Qualification Round
+**A decentralized AI-powered financial advisor dApp built on the Internet Computer Protocol (ICP), combining on‑chain identity, machine learning forecasting, and portfolio simulation.**
 
-🚀 Features
-🔐 Wallet-Based Login (Plug Wallet / Internet Identity)
+---
 
-🧠 AI Chatbot (Gemini API powered)
+## 🚀 Features
 
-📈 Forecasting Engine for stocks, BTC, gold using ARIMA, XGBoost, LSTM
+- **Wallet-Based Login**
+  - Supports Plug Wallet and Internet Identity for seamless Web3 authentication.
+- **AI Chatbot**
+  - Powered by Google Gemini API for real-time financial advisory and Q&A.
+- **Forecasting Engine**
+  - Employs ARIMA, LSTM, and XGBoost models to predict prices of stocks, BTC, and gold.
+- **Risk & Goal-Based Portfolio Recommender**
+  - Suggests tailored portfolios based on user-defined risk tolerance and objectives.
+- **On‑Chain Profile Storage**
+  - Uses a Motoko ICP canister to store and retrieve user profile data.
+- **DeFi Investment Simulator**
+  - Features a mock DEX using test tokens for simulated trades.
+- **CKBTC Integration (optional)**
+  - Enables Chain-Key Bitcoin deposits and withdrawals.
+- **Express.js API Backend**
+  - Manages user auth, MongoDB storage, and web services.
+- **FastAPI ML Service**
+  - Handles forecasting, portfolio recommendation, and chatbot endpoint logic.
 
-🎯 Risk & Goal-Based Portfolio Recommender
+---
 
-🪙 On-Chain Profile Storage (via Motoko ICP Canister)
+## 🏗️ Architecture Overview
 
-⚖️ DeFi Investment Simulator (mock DEX + test tokens)
+React Frontend
+↕ (REST via Axios)
+Express.js Backend (Auth + MongoDB)
+↕ (REST via Axios)
+FastAPI ML Service (XGBoost, LSTM, Gemini)
+↕ (dfinity/agent)
+ICP Canister (On-chain profile via Motoko)
 
-🪙 Chain-Key Bitcoin (CKBTC) integration (optional)
 
-🏗️ System Architecture
+- **Frontend** (React + Tailwind): Dashboard, Chat, Profile UI  
+- **Backend** (Node.js + Express): Authentication, user data, wallet operations  
+- **Services** (FastAPI): Forecasting, ML recommendations, AI chatbot  
+- **Canister** (Motoko): Blockchain-based user profile storage  
+- **Scripts & Deployment**: Includes DFX + deployment logic  
 
-📁 Folder Structure
+---
 
-DeFi-Copilot-ICP/
-├── frontend/         # React + Tailwind UI
-│   └── src/pages/    # Dashboard, Chat, Profile
-├── backend/          # Express.js API (auth, MongoDB)
-│   └── server.js
-├── services/      # FastAPI ML Service (XGBoost, Gemini, LSTM)
-│   └── main.py
-├── icp_canister/     # Motoko storage functions for profiles
-│   └── main.mo
-├── docs/             # Pitch deck, diagrams, openapi.yaml
-├── scripts/          # Deployment scripts
-└── README.md
-🌐 Service Communication
-Source → Target	Protocol	Description
-React → Express	REST (Axios)	Auth, user data, wallet ops
-React → FastAPI	REST (Axios)	ML forecasts, recommendations, chat
-React → ICP Canister	@dfinity/agent	Store/load on-chain user profiles
+## 🛠️ Local Development
 
-📦 Local Development Setup
-🔧 Prerequisites
-Node.js 18+
+### Prerequisites
+- Node.js ≥ 18  
+- Python ≥ 3.9  
+- MongoDB (local or Atlas)  
+- DFINITY `dfx` CLI  
 
-Python 3.9+
+### Setup Steps
 
-MongoDB (local or Atlas)
-
-dfx CLI
-
-🔌 Frontend
-
-cd frontend
-npm install
-npm run dev
-🔄 Backend (Node + Express)
+1. **Frontend**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+Backend
 
 cd backend
 npm install
 node server.js
-🧠 AI Services (FastAPI)
+AI Services (FastAPI)
 
-cd ai_services
+cd services
 pip install -r requirements.txt
 uvicorn main:app --reload
-🧠 Canister (ICP)
+ICP Canister
 
+cd icp_canister
 dfx start --background
 dfx deploy
 📊 Machine Learning Modules
-Forecasting: ARIMA, LSTM, XGBoost
+Forecasting: ARIMA, LSTM, and XGBoost
 
-Recommendation: Clustering, PSO
+Recommender: Clustering + Particle Swarm Optimization (PSO)
 
-Chatbot: Gemini API
+Chatbot: Google Gemini Integration
 
-Simulation: Trade bot logic (EMA, RSI)
+Simulator: Automated trade logic with EMA & RSI technical indicators
 
-📝 License
-Licensed under the MIT License. See the LICENSE file for full text.
+🛡️ License & Acknowledgements
+Licensed under MIT – LICENSE
 
-🙌 Acknowledgements
+Thanks to:
+
 DFINITY Foundation
 
 Google Gemini API
 
 DoraHacks WCHL 2025
 
-Plug Wallet SDK
+Plug Wallet SDK 
+github.com
+
+📚 Contributing
+Fork this repository
+
+Create a feature branch (git checkout -b feature/my-feature)
+
+Commit your changes (git commit -m "Add my feature")
+
+Push the branch (git push origin feature/my-feature)
+
+Open a Pull Request
+
+📧 Contact
+For questions or support, feel free to reach out or open an issue.
+
+Built for the WCHL 2025 Qualification Round
