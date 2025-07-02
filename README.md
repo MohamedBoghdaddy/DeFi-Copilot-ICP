@@ -1,116 +1,154 @@
-# DeFi Copilot 🧠💼
+# 🧠 DeFi Copilot – Decentralized AI Financial Advisor on ICP
 
-**A decentralized AI-powered financial advisor dApp built on the Internet Computer Protocol (ICP), combining on‑chain identity, machine learning forecasting, and portfolio simulation.**
-
----
-
-## 🚀 Features
-
-- **Wallet-Based Login**
-  - Supports Plug Wallet and Internet Identity for seamless Web3 authentication.
-- **AI Chatbot**
-  - Powered by Google Gemini API for real-time financial advisory and Q&A.
-- **Forecasting Engine**
-  - Employs ARIMA, LSTM, and XGBoost models to predict prices of stocks, BTC, and gold.
-- **Risk & Goal-Based Portfolio Recommender**
-  - Suggests tailored portfolios based on user-defined risk tolerance and objectives.
-- **On‑Chain Profile Storage**
-  - Uses a Motoko ICP canister to store and retrieve user profile data.
-- **DeFi Investment Simulator**
-  - Features a mock DEX using test tokens for simulated trades.
-- **CKBTC Integration (optional)**
-  - Enables Chain-Key Bitcoin deposits and withdrawals.
-- **Express.js API Backend**
-  - Manages user auth, MongoDB storage, and web services.
-- **FastAPI ML Service**
-  - Handles forecasting, portfolio recommendation, and chatbot endpoint logic.
+**Built for the World Computer Hacker League (WCHL) 2025 – Qualification Round**  
+Track: 🧠 **Decentralized AI** | Tags: ICP · AI · Motoko · Web3 · Chain Fusion · BTC
 
 ---
 
-## 🏗️ Architecture Overview
+## 🔥 Project Summary
 
-React Frontend
-↕ (REST via Axios)
-Express.js Backend (Auth + MongoDB)
-↕ (REST via Axios)
-FastAPI ML Service (XGBoost, LSTM, Gemini)
-↕ (dfinity/agent)
-ICP Canister (On-chain profile via Motoko)
-
-
-- **Frontend** (React + Tailwind): Dashboard, Chat, Profile UI  
-- **Backend** (Node.js + Express): Authentication, user data, wallet operations  
-- **Services** (FastAPI): Forecasting, ML recommendations, AI chatbot  
-- **Canister** (Motoko): Blockchain-based user profile storage  
-- **Scripts & Deployment**: Includes DFX + deployment logic  
+**DeFi Copilot** is a decentralized financial advisor built on the Internet Computer Protocol (ICP) that combines on-chain identity, AI-powered market analysis, and real-time forecasting for informed personal investment. It features a Gemini-powered AI chatbot, on-chain user profile storage, and a fullstack system integrating React, Express.js, FastAPI, and Motoko canisters.
 
 ---
 
-## 🛠️ Local Development
+## 🧩 Features
+
+- 🔐 Wallet-based Login (Internet Identity, Plug)
+- 🧠 **AI Chatbot** (Google Gemini API) for financial guidance
+- 📊 **Forecasting Models**: ARIMA, XGBoost, LSTM
+- 📁 User profiles stored on **ICP via Motoko canister**
+- 💼 **Portfolio Recommendations** based on risk/goals
+- 🏦 Mock DeFi Simulator using technical indicators (EMA, RSI)
+- 🔄 Express + FastAPI microservice architecture
+- 🌐 Frontend with React + Tailwind
+- 🔗 ICP Mainnet deployable (with `dfx.json` & Canister IDs)
+- 🧪 Open source licensed, testable, and extensible
+
+---
+
+## 🛠️ Architecture
+
+React Frontend (Plug Wallet, Web UI)
+↕ REST
+Node.js Backend (Auth, MongoDB)
+↕ REST
+FastAPI Service (Gemini AI + Forecasting Engine)
+↕ dfx agent
+ICP Motoko Canister (on-chain profile storage)
+
+
+
+---
+
+## 🚀 Local Development Setup
 
 ### Prerequisites
-- Node.js ≥ 18  
-- Python ≥ 3.9  
-- MongoDB (local or Atlas)  
-- DFINITY `dfx` CLI  
+- Node.js ≥ 18  
+- Python ≥ 3.9  
+- MongoDB  
+- `dfx` CLI  
+- Plug Wallet or Internet Identity for login
 
 ### Setup Steps
 
-1. **Frontend**
-   ```bash
-   cd frontend
-   npm install
-   npm run dev
-Backend
-
+#### 1️⃣ Frontend
+```
+cd frontend
+npm install
+npm run dev
+2️⃣ Backend
+bash
+Copy code
 cd backend
 npm install
 node server.js
-AI Services (FastAPI)
-
+3️⃣ FastAPI ML Services
+```
 cd services
 pip install -r requirements.txt
 uvicorn main:app --reload
-ICP Canister
+4️⃣ ICP Canister
 
 cd icp_canister
 dfx start --background
 dfx deploy
-📊 Machine Learning Modules
-Forecasting: ARIMA, LSTM, and XGBoost
+🤖 AI Modules
+Gemini API for financial Q&A
 
-Recommender: Clustering + Particle Swarm Optimization (PSO)
+ARIMA, LSTM, XGBoost models for forecasting
 
-Chatbot: Google Gemini Integration
+PSO-based recommender for goal-based portfolios
 
-Simulator: Automated trade logic with EMA & RSI technical indicators
+Chat intent + sentiment parsing with fallback logic
 
-🛡️ License & Acknowledgements
-Licensed under MIT – LICENSE
+🎥 Demo Video
+🔗 Demo Walkthrough Video (10 mins)
+🎯 Architecture Overview → Code Walkthrough → Live Demo
+```
+📸 Screenshots
 
-Thanks to:
 
-DFINITY Foundation
+🧱 Tech Stack
+Frontend: React + Tailwind
 
-Google Gemini API
+Backend: Express.js + MongoDB
 
-DoraHacks WCHL 2025
+AI Services: FastAPI (Python), Gemini API
 
-Plug Wallet SDK 
-github.com
+Blockchain: Motoko ICP Canister
 
-📚 Contributing
-Fork this repository
+Wallet: Plug + Internet Identity
 
-Create a feature branch (git checkout -b feature/my-feature)
+Data: Real-time financial APIs + Gemini response modeling
 
-Commit your changes (git commit -m "Add my feature")
+📄 Submission Checklist (✅ Ready)
+ GitHub repo with source code
 
-Push the branch (git push origin feature/my-feature)
+ dfx.json included with working ICP deploy
+
+ Architecture & project summary in README
+
+ Gemini AI + Forecasting + Recommender integration
+
+ Screenshots and architecture diagram
+
+ Demo video (voice-over or subtitles)
+
+ MIT License included
+
+ On-chain ICP storage working with canister IDs
+
+ Clear local setup instructions
+---
+```
+🗺️ Future Roadmap
+☁️ Deploy all services via Docker & ICP boundary nodes
+
+🧬 On-chain encrypted financial history (anonymized learning)
+
+🏛️ DAO-based governance on portfolio strategies
+
+🔐 CKBTC support for real DeFi interactions
+
+📱 Mobile-first responsive dApp UI
+
+📜 License
+This project is licensed under the MIT License.
+---
+
+🤝 Contributing
+Fork this repo
+
+Create a new branch (git checkout -b feature/my-feature)
+
+Commit your changes (git commit -m "Add feature")
+
+Push to the branch (git push origin feature/my-feature)
 
 Open a Pull Request
 
-📧 Contact
-For questions or support, feel free to reach out or open an issue.
-
-Built for the WCHL 2025 Qualification Round
+🏆 About WCHL 2025
+Built for the World Computer Hacker League (WCHL) – ICP Qualification Round.
+Hack your way into Web3 history! 🧠🌐
+```
+Made with ❤️ by Mohamed Boghdaddy & Team for WCHL 2025
