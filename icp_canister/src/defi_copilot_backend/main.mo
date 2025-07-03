@@ -36,7 +36,9 @@ actor {
   };
 
   // Admin/debug: get profile of any principal (optional)
+  public query func getProfileByPrincipal(p : Principal) : async ?UserProfile {
     return profiles.get(p);
   };
+
 
 };
